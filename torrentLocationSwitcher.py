@@ -18,6 +18,8 @@ for item in torrent_dir_file:
     if item.endswith(".added"):
         added_files = added_files +  1
         os.remove(os.path.join(torrent_dir, item))
+
+#give some feedback to the user about how many files are removed
 if added_files > 1:
     print(str(added_files) + " *.added files removed")
 elif added_files == 1:
