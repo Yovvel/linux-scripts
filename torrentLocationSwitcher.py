@@ -1,5 +1,5 @@
-#   step 4: go to /home/yovvel/testfolder/downloads/
-#   step 5: move each *.torrent to /home/yovvel/testfolder/torrent/
+
+
 
 import os
 import shutil
@@ -13,11 +13,12 @@ downloads_dir_file= os.listdir(downloads_dir)
 
 #   step 2: for each *.added file:
 for item in torrent_dir_file:
+            #   step 3: remove file
     if item.endswith(".added"):
-        #   step 3: remove file
         os.remove(os.path.join(torrent_dir, item))
 
-
+#   step 4: go to /home/yovvel/testfolder/downloads/
 for item in downloads_dir_file:
+    #   step 5: move each *.torrent to /home/yovvel/testfolder/torrent/
     if item.endswith(".torrent"):
         shutil.move(downloads_dir+item, torrent_dir)
