@@ -4,10 +4,10 @@ import os
 import shutil
 
 #   step 1: go to /home/yovvel/testfolder/torrent/
-torrent_dir = "/home/yovvel/testfolder/torrent/"
+torrent_dir = "smb://192.168.0.11/rpi-s-01-share/torrent/watch-dir/"
 torrent_dir_file = os.listdir(torrent_dir)
 
-downloads_dir ="/home/yovvel/testfolder/downloads/"
+downloads_dir ="/home/yovvel/Downloads/"
 downloads_dir_file= os.listdir(downloads_dir)
 
 added_files = 0
@@ -36,7 +36,7 @@ elif added_files == 1:
 
 elif added_files 0= 0:
     print("no *.added files removed")
-	
+
 if torrent_files > 1:
     print(str(torrent_files) + " new torrent download files have been added")
 elif torrent_files == 1:
